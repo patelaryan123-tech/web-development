@@ -1,0 +1,80 @@
+/* General Page Style */
+body {
+    background-color: black;
+    color: white;
+    font-family: "Edu SA Hand", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Style */
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40px;
+    animation: fadeInDown 1.5s ease;
+}
+
+/* Paragraph Style */
+p {
+    color: whitesmoke;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    width: 80%;
+    animation: fadeIn 2s ease-in;
+}
+
+/* h4 Section Titles */
+h4 {
+    color: #00ffcc;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    animation: fadeInUp 1s ease;
+}
+
+/* Feature Description Paragraphs */
+.football {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: fadeIn 2s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container Styling */
+.container {
+    padding: 20px;
+    animation: fadeIn 3s ease;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg2.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+}

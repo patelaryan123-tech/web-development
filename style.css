@@ -2,12 +2,10 @@ ul {
     display: flex;
 
 }
-
 li {
     text-decoration: none;
     list-style: none;
 }
-
 li a {
     text-decoration: none;
     padding: 14px;
@@ -16,21 +14,18 @@ li a {
     font-family: "Edu SA Hand", cursive;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-
 }
-
 h1 {
     justify-content: center;
     text-align: center;
     color: black;
     background-color: bisque;
     transform: scale(1.1);
+     /* transform: rotate(17deg);  */
 }
-
 body {
     background-color: black;
 }
-
 body::before {
     content: "";
     position: fixed;
@@ -38,96 +33,32 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('background.jpg') no-repeat center center;
+    background: url('bg.jpg') no-repeat center center;
     background-size: cover;
     z-index: -1;
-    opacity: 1.5;
+    opacity: 0.5;
 }
-
-
 li a:hover {
     background-color: bisque;
 }
-
-input {
-    justify-content: center;
-    margin: 44px auto;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-family: "Edu SA Hand", cursive;
-    padding: 12px;
-    width: 30%;
-}
-
-.Head {
-    color:black;
-    text-shadow: 2px 1px 1px;
-    transition: all 1s ease ease-in-out;
-}
-
-#btn {
-
-    padding: 6px 20px;
-    border-radius: 12px;
-    background-color: blanchedalmond;
-    border: 2px solid black;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    display: block;
-    font-family: "Edu SA Hand", cursive;
-    align-items: center;
-    transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-}
-
-#btn:hover {
-    background-color: aquamarine;
-    cursor: pointer;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px aqua;
-}
-
-form {
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .Head {
     animation: slideDown 1s ease-in-out forwards;
 }
-
 @keyframes slideDown {
     0% {
         opacity: 0;
         transform: translateY(-40px);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
 body::before {
     opacity: 0.6;
     /* 1.5 is invalid. Max = 1 */
     animation: bgFade 5s infinite alternate;
 }
-
 @keyframes bgFade {
     0% {
         opacity: 0.3;
@@ -157,4 +88,56 @@ body::before {
 }
 .walk-heading:hover {
     animation-play-state: paused;
+}
+.container{
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    /* background-color: bisque; */
+    color: black;
+    
+}
+
+p{
+  box-sizing: border-box;
+    border: 2px solid black;
+    background-color: bisque;
+    color: #000000;
+    display: inline-block;
+    padding: 12px; 
+    width: 20%;
+    height: 30%;
+    margin: 85px;
+    margin-top: 150px;
+font-weight: bold;
+    font-family: "Edu SA Hand", cursive;
+      animation: fadeInUp 1s ease-in-out, blink 1.5s linear infinite;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animated-heading {
+    color: blanchedalmond;
+    font-size: 2rem;
+    font-family: "Edu SA Hand", cursive;
+    text-align: center;
+    margin-top: 50px;
+    animation: slideInScale 2s ease-out;
+    text-shadow: 1px 2px 1px;
+}
+@keyframes slideInScale {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

@@ -1,0 +1,81 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f5f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    background-color: #1e3d59;
+    color: white;
+    padding: 25px 0;
+    margin: 0;
+    animation: slideDown 1s ease;
+}
+
+.success-stories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.story-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 300px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.story-card h3 {
+    color: #1e3d59;
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+    .success-stories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-card {
+        width: 90%;
+    }
+}
